@@ -32,10 +32,15 @@ class IniciarCalculadora:
                     continue
 
                 operacao = self.operacoes[escolha]
-
-                x = float(input('Digite o primeiro número: '))
-                y = float(input('Digite o segundo número: '))
                 
+                while True:
+                    try:
+                        x = float(input('Digite o primeiro número: '))
+                        y = float(input('Digite o segundo número: '))
+                        break  
+                    except ValueError:
+                        print("Entrada inválida! Por favor, digite um número válido.")
+
                 calculadora = Calcular()
                 resultado   = calculadora.calcular(operacao, x, y)
 

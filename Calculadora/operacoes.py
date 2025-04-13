@@ -1,8 +1,5 @@
 class Operacoes:
     def __init__(self, x: float, y: float):
-        if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
-            raise TypeError('Os valores devem ser numéricos (int ou float).')
-        
         self.x = x
         self.y = y
 
